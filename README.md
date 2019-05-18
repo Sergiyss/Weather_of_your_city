@@ -9,3 +9,5 @@
 Java, Kotlin, Room, Coroutines, Retrofit, Dagger, Glide, Androidx, BRVAH.
 
 Использую api https://www.apixu.com
+
+Демо https://drive.google.com/open?id=1hTST4UoHSO304mkiyWCy2NogZSgIPLEd
