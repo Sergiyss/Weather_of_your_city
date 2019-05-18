@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.vkcoins.todaysweatherforecast.MainActivity">
+
+    <!--<item-->
+    <!--android:id="@+id/add_new_city"-->
+    <!--android:title="Cart"-->
+    <!--android:icon="@drawable/ic_location_city_white_24dp"-->
+    <!--app:showAsAction="always" />-->
+
+    <item
+            android:id="@+id/add_new_city"
+            android:title="Добавить город"/>
+
+    <item android:title="Ред. список городов"/>
+</menu>

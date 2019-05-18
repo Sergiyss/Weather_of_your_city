@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:elevation="@dimen/dp_10"
+        app:cardBackgroundColor="#FFF"
+        app:cardCornerRadius="6dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/weather_bg"
+            android:padding="@dimen/dp_10">
+
+        <TextView
+                tools:text="Павлоград"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemWeatherNameCity"
+                android:fontFamily="sans-serif-condensed"
+                app:layout_constraintStart_toEndOf="@+id/itemWeatherIcon" android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                tools:srcCompat="@tools:sample/avatars"
+                android:id="@+id/itemWeatherIcon"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toEndOf="@+id/itemWeatherThisTemp"
+                android:layout_marginStart="8dp"/>
+        <TextView
+                android:text="@string/tempMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/minTemp"
+                app:layout_constraintStart_toEndOf="@+id/itemWeatherIcon"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/itemWeatherNameCity"
+                app:layout_constraintBottom_toBottomOf="@+id/itemWeatherIcon"/>
+        <TextView
+                android:text="@string/TempMax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/maxTemp"
+                app:layout_constraintTop_toTopOf="@+id/textView" app:layout_constraintStart_toEndOf="@+id/textView"
+                android:layout_marginStart="8dp"/>
+        <TextView
+                tools:text="19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemWeatherThisTemp"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:fontFamily="serif" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+                tools:text="Tex"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemWeatherMinTemp"
+                app:layout_constraintStart_toEndOf="@+id/minTemp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/minTemp"/>
+        <TextView
+                tools:text="Tex"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/itemWeatherMaxTemp"
+                app:layout_constraintTop_toTopOf="@+id/maxTemp" app:layout_constraintStart_toEndOf="@+id/maxTemp"
+                android:layout_marginStart="8dp"
+        />
+        <TextView
+                android:text="/"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView" app:layout_constraintStart_toEndOf="@+id/itemWeatherMinTemp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="@+id/itemWeatherMinTemp"/>
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="117dp"
+                android:layout_height="54dp" tools:layout_editor_absoluteY="8dp" tools:layout_editor_absoluteX="257dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">today\'s weather forecast</string>
+    <string name="action_settings">Settings</string>
+    <string name="tempMin">Min</string>
+    <string name="TempMax">Max</string>
+    <string name="no_Internet_connection">Нет подключения к интернету</string>
+    <string name="tollbar_title">Погода вашего города</string>
+    <string name="off_gps">Включите GPS</string>
+    <string name="no_Internet">Нет интернета</string>
+</resources>
