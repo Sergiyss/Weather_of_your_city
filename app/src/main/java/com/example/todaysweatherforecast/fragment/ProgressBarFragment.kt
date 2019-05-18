@@ -11,19 +11,20 @@ import com.example.todaysweatherforecast.isOnline
 
 class ProgressBarFragment : BaseFragment(){
 
-    private lateinit var errorTextView : TextView
+    private var errorTextView : TextView? = null
 
     override fun init(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         val root = inflater.inflate(R.layout.fragment_show_progress_bar, container, false)
 
+        println("Init ProgressBarFragment")
         errorTextView = root.findViewById<TextView>(R.id.fragment_show_progress_bar_text_view_error_message)
 
         return root
     }
 
     fun errorMessage(errorText : String){
-        errorTextView.visibility = View.VISIBLE
-        errorTextView.text = errorText
+        errorTextView?.visibility = View.VISIBLE
+        errorTextView?.text = errorText
     }
 
     fun newInstance(): ProgressBarFragment {

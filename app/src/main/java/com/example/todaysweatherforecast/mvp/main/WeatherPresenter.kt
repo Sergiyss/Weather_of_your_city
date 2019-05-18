@@ -24,12 +24,13 @@ class WeatherPresenter @Inject constructor(var room : AppDatabase) : BasePresent
     WeatherContract.Presenter {
 
     private var thisNameCity = ""
+    private val key = "13a67b76e2b94583896121513190605"
     private var updateLocation = false
     private val arrayWeather : ArrayList<Weather> = ArrayList()
 
     //Получаем прогноз погоды остальных городов
     private fun getWeatherForecasts(nameCity : String): Call<Weather> =
-        App.get().connectServer()!!.apiApixuCom("13a67b76e2b94583896121513190605",nameCity)
+        App.get().connectServer()!!.apiApixuCom(key,nameCity)
 
     @SuppressLint("MissingPermission")
     override fun getObtainNameCity(locationManager: LocationManager, updateLocations : Boolean) {
@@ -94,6 +95,11 @@ class WeatherPresenter @Inject constructor(var room : AppDatabase) : BasePresent
 
     override fun startLoadAllCityes(){
         Coroutines.io{
+            val arrNameCitys = room.weatherDao().getAllWords()
+            if(arrNameCitys.size == 0){
+                loadCity(null.toString())
+            }
+
             if (arrayWeather.size == 0){
                 for(item in room.weatherDao().getAllWords()){
                     println("loadAllCityes --- ${item.nameCity}")
