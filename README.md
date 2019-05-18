@@ -6,5 +6,6 @@
 2. Прогноз погоды на 7 дней вперед, с текущим днем.
 3. Возможно просматривать города, других нас. пунктов, одним движением. Доступно 6 нас. пунктов, для одного устройства.
 ## Используемые технологии:
-Java, Kotlin, Room, Coroutines, Retrofit, Dagger, Glide, Androidx, BRVAH 
+Java, Kotlin, Room, Coroutines, Retrofit, Dagger, Glide, Androidx, BRVAH.
+
 Использую api https://www.apixu.com
