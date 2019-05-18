@@ -1,4 +1,5 @@
 package com.example.todaysweatherforecast.adapter_rv
+
 import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.chad.library.adapter.base.BaseQuickAdapter
